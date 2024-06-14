@@ -7,7 +7,7 @@ except ImportError:
     from llama_index.core import VectorStoreIndex, ServiceContext, Document, SimpleDirectoryReader
 
 st.set_page_config(page_title="Chat with the Streamlit docs, powered by LlamaIndex", page_icon="🦙", layout="centered", initial_sidebar_state="auto", menu_items=None)
-openai.api_key = "ask-proj-9SYULpKohuhpjAV65FGGT3BlbkFJ1FIBXCHOr6ApbJIVL3ZJ"
+openai.api_key = "sk-proj-muJZVlCti0DzQ01LFqaLT3BlbkFJkQ7mUtde5lWJttQiDrqp"
 
 
 st.title("Chat with the Streamlit docs, powered by LlamaIndex 💬🦙")
