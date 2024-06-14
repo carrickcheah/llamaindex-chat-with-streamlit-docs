@@ -5,12 +5,13 @@ try:
   from llama_index import VectorStoreIndex, ServiceContext, Document, SimpleDirectoryReader
 except ImportError:
   from llama_index.core import VectorStoreIndex, ServiceContext, Document, SimpleDirectoryReader
-
+st.secrets.openai_key = "sk-proj-9SYULpKohuhpjAV65FGGT3BlbkFJ1FIBXCHOr6ApbJIVL3ZJ"
 st.set_page_config(page_title="Chat with the Streamlit docs, powered by LlamaIndex", page_icon="🦙", layout="centered", initial_sidebar_state="auto", menu_items=None)
-openai.api_key = st.secrets.openai_key
+openai.api_key = 
 st.title("Chat with the Streamlit docs, powered by LlamaIndex 💬🦙")
 st.info("Check out the full tutorial to build this app in our [blog post](https://blog.streamlit.io/build-a-chatbot-with-custom-data-sources-powered-by-llamaindex/)", icon="📃")
-         
+
+
 if "messages" not in st.session_state.keys(): # Initialize the chat messages history
     st.session_state.messages = [
         {"role": "assistant", "content": "Ask me a question about Streamlit's open-source Python library!"}
