@@ -20,7 +20,7 @@ st.set_page_config(page_title="Chat with the Streamlit docs, powered by LlamaInd
                    initial_sidebar_state="auto",
                    menu_items=None)
 
-st.title("Welcome to BolehGPT.com")
+st.title("Chat with the Streamlit docs, powered by LlamaIndex 💬🦙")
 st.info("Check out the full tutorial to build this app in our [blog post](https://blog.streamlit.io/build-a-chatbot-with-custom-data-sources-powered-by-llamaindex/)", icon="📃")
 
 # Function to load data and create an index
@@ -53,11 +53,4 @@ for message in st.session_state.messages:  # Display the prior chat messages
     with st.chat_message(message["role"]):
         st.write(message["content"])
 
-# Generate and display a new assistant response if needed
-if st.session_state.messages[-1]["role"] != "assistant":
-    with st.chat_message("assistant"):
-        with st.spinner("Thinking..."):
-            response = st.session_state.chat_engine.chat(st.session_state.messages[-1]["content"])
-            st.write(response.response)
-            message = {"role": "assistant", "content": response.response}
-            st.session_state.messages.append(message)  # Add response to message history
+# Generate and display a new assistant response if nee
